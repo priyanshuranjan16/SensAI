@@ -26,7 +26,7 @@ export default async function Header() {
     <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/">
-          <Image
+          <Image suppressHydrationWarning
             src={"/logo.png"}
             alt="Sensai Logo"
             width={200}
@@ -43,7 +43,7 @@ export default async function Header() {
                 variant="outline"
                 className="hidden md:inline-flex items-center gap-2"
               >
-                <LayoutDashboard className="h-4 w-4" />
+                <LayoutDashboard  suppressHydrationWarning className="h-4 w-4" />
                 Industry Insights
               </Button>
               <Button variant="ghost" className="md:hidden w-10 h-10 p-0">

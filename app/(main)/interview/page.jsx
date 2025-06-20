@@ -1,7 +1,7 @@
 import { getAssessments } from "@/actions/interview";
-import StatsCards from "./_components/stats-cards";
-import PerformanceChart from "./_components/performace-chart";
-import QuizList from "./_components/quiz-list";
+import StatsCards from "./components/stats-cards";
+import PerformanceChart from "./components/performance-chart";
+import QuizList from "./components/quiz-list";
 
 export default async function InterviewPrepPage() {
   const assessments = await getAssessments();

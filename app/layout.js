@@ -4,7 +4,6 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
-import { dark } from "@clerk/themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +16,12 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider
       appearance={{
-        baseTheme: dark,
+        variables: {
+          colorPrimary: "#000000", // Customize this color as needed
+        },
+        elements: {
+          formButtonPrimary: "bg-black text-white hover:bg-gray-800",
+        },
       }}
     >
       <html lang="en" suppressHydrationWarning>
@@ -34,7 +38,6 @@ export default function RootLayout({ children }) {
             <Header />
             <main className="min-h-screen">{children}</main>
             <Toaster richColors />
-
             <footer className="bg-muted/50 py-12">
               <div className="container mx-auto px-4 text-center text-gray-200">
                 <p>Made with 💗</p>
