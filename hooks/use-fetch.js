@@ -26,3 +26,7 @@ const useFetch = (cb) => {
 };
 
 export default useFetch;
+
+// Eliminates Repititive Code
+// Consistent Error Handling
+// Better User Experience 
